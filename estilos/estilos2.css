@@ -1,0 +1,73 @@
+.container{
+    background-color: aqua;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    display: grid; /*habilita grid*/
+    grid-gap: 10px;/*interlineado/espacio ente las celdas*/
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 2fr 1fr 10fr 1fr;
+    grid-template-areas: "cabecera cabecera cabecera" 
+                         " menu      menu    menu"
+                         "contenido contenido publi"
+                         "pie       pie         pie";/*sirve usando los nombres de las etiquetas*/
+}
+.container>div{
+    background-color: chartreuse;
+    
+}
+.container .cabecera{
+    background-color: yellow;
+    grid-column: cabecera ;
+}
+.container .menu{
+    background-color: coral;
+    grid-column: menu ;
+}
+.container .contenido{
+    background-color: beige;
+    padding: 10px;
+    grid-column: contenido;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    
+}
+.container .publi{
+    background-color: antiquewhite;
+    padding: 10px;
+    grid-column: publi;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+
+}
+.container .pie{
+    background-color: darkkhaki;
+    grid-column: pie;
+}
+.container .contenido .text1 {
+    background-color: aliceblue;
+    grid-column: 1/2;
+}
+.container .contenido .text2 {
+    background-color: aliceblue;
+    grid-column: 2/3;
+}
+.container .contenido .text1 .tp,
+.container .contenido .text2 .tp{
+    font-size: 18px;
+}
+.container .publi .img1{
+    background-color: blueviolet;
+    grid-row: 1/2;
+
+}
+.container .publi .img2{
+    background-color: blueviolet;
+    grid-row: 2/3;
+    
+}
+.container .publi .img1 .pp, .container .publi .img2 .pp{
+    font-size: 12px;
+}
